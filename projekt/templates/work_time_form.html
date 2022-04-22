@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block tytul %} Raport {% endblock %}
+
+
+{% block strona %}
+<div class="col d-flex justify-content-center">
+ <div class="card" style="width: 32rem; float: left; margin-right: 1rem;">
+      <div class="card-body">
+          <h5 class="card-title">Nowy Raport</h5>
+        <form method="post">
+        {% csrf_token %}
+        {{ form|bootstrap }}
+                <button type="submit" class="btn btn-primary">Nowy Raport</button>
+        </form>
+      </div>
+ </div>
+</div>
+
+
+{% endblock %}
+
